@@ -30,6 +30,7 @@
 				<p class="descripcion">Apasionado por la Inteligencia Artificial, el Desarrollo Web y la Ciberseguridad. Construyendo soluciones eficientes desde Cuba para el mundo.</p>
 				<div class="hero-botones">
 					<a href="#proyectos" class="btn-primario">Ver mis proyectos</a>
+					<a href="/mi-portafolio/CV_Christian_Santana_2026.pdf" target="_blank" class="btn-cv">Descargar CV</a>
 					<a href="https://github.com/cssierra1234-ux" target="_blank" class="btn-secundario">Mi GitHub</a>
 					<a href="https://wa.me/5359441012?text=Hola%20Christian,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20contactarte." target="_blank" class="btn-whatsapp">WhatsApp</a>
 				</div>
@@ -238,8 +239,7 @@
 		line-height: 1.6;
 		overflow-x: hidden;
 		scroll-behavior: smooth; /* Scroll suave */
-		
-		/* Fondo de Cuadrícula */
+
 		background-image: 
 			linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent 1px),
 			linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px);
@@ -368,15 +368,21 @@
 	}
 
 	.hero-botones { display: flex; gap: 15px; flex-wrap: wrap; }
-
 	/* BOTONES PRO */
-	.btn-primario, .btn-secundario, .btn-whatsapp {
+	.btn-primario, .btn-secundario, .btn-whatsapp, .btn-cv {
 		position: relative;
 		overflow: hidden;
 		z-index: 1;
+		padding: 12px 24px;
+		border-radius: 4px;
+		text-decoration: none;
+		font-weight: 600;
+		font-family: var(--font-mono);
+		transition: all 0.3s;
+		display: inline-block;
 	}
 
-	.btn-primario::before, .btn-secundario::before, .btn-whatsapp::before {
+	.btn-primario::before, .btn-secundario::before, .btn-whatsapp::before, .btn-cv::before {
 		content: '';
 		position: absolute;
 		top: 0;
@@ -390,41 +396,35 @@
 		z-index: -1;
 	}
 
-	.btn-primario:hover::before, .btn-secundario:hover::before, .btn-whatsapp:hover::before {
+	.btn-primario:hover::before, .btn-secundario:hover::before, .btn-whatsapp:hover::before, .btn-cv:hover::before {
 		transform: scaleX(1);
 	}
 
 	.btn-primario {
 		background-color: var(--accent);
 		color: var(--bg-color);
-		padding: 12px 24px;
-		border-radius: 4px;
-		text-decoration: none;
-		font-weight: 600;
-		font-family: var(--font-mono);
-		transition: all 0.3s;
 	}
 
 	.btn-secundario {
 		border: 1px solid var(--text-muted);
 		color: var(--text-main);
-		padding: 12px 24px;
-		border-radius: 4px;
-		text-decoration: none;
-		font-weight: 600;
-		font-family: var(--font-mono);
-		transition: all 0.3s;
 	}
 
 	.btn-whatsapp {
 		border: 1px solid #25d366;
 		color: #25d366;
-		padding: 12px 24px;
-		border-radius: 4px;
-		text-decoration: none;
-		font-weight: 600;
-		font-family: var(--font-mono);
-		transition: all 0.3s;
+	}
+
+	.btn-cv {
+		background-color: transparent;
+		border: 1px solid var(--text-main);
+		color: var(--text-main);
+	}
+
+	.btn-cv:hover {
+		background-color: rgba(255, 255, 255, 0.1);
+		border-color: var(--accent);
+		color: var(--accent);
 	}
 
 	/* FOTO DE PERFIL */
